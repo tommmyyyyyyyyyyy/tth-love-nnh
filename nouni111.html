@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تومي تعشق نوووني</title>
+
+    <style>
+
+        body {
+
+            background-color: #ffb6c1;
+
+            font-family: Tahoma, sans-serif;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            margin: 0;
+
+        }
+
+        .card {
+
+            background-color: rgba(255, 255, 255, 0.75);
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+            max-width: 400px;
+
+            width: 90%;
+
+        }
+
+        img {
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin: 0 5px 15px 5px;
+
+            border: 2px solid white;
+
+        }
+
+        h2 {
+
+            color: #d81b60;
+
+            font-size: 22px;
+
+            margin-bottom: 20px;
+
+        }
+
+        button {
+
+            padding: 10px 25px;
+
+            font-size: 18px;
+
+            border-radius: 15px;
+
+            border: none;
+
+            cursor: pointer;
+
+            margin: 5px;
+
+        }
+
+        .next-btn {
+
+            background-color: #e91e63;
+
+            color: white;
+
+        }
+
+        #yesBtn {
+
+            background-color: #4caf50;
+
+            color: white;
+
+            transition: transform 0.2s;
+
+        }
+
+        #noBtn {
+
+            background-color: #f44336;
+
+            color: white;
+
+        }
+
+        .hidden {
+
+            display: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- الصفحة الأولى -->
+
+    <div id="p1">
+
+        <div>
+
+            <img src="nounip.jpg" alt="1">
+
+            <img src="bdcat.jpg" alt="2">
+
+        </div>
+
+        <h2>
+
+           يابخت ليلٍ ضوى فيه يوم ميلادك وعسى كل عام يمر وانتي بخير يابعد هالدنيا كلها ❤️
+
+        </h2>
+
+        <button class="next-btn" type="button" onclick="go2()">
+
+             الي بعدووو
+
+        </button>
+
+    </div>
+
+    <!-- الصفحة الثانية -->
+
+    <div id="p2" class="hidden">
+
+        <h2>
+
+            مستعده نطلع اقوى ديت بالحياااه؟؟؟؟
+
+        </h2>
+
+        <div style="
+
+            position: relative;
+
+            min-height: 80px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+        ">
+
+            <button id="yesBtn" type="button" onclick="go3()">
+
+                إي
+
+            </button>
+
+            <button id="noBtn" type="button" onclick="grow()">
+
+                لا
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- الصفحة الثالثة -->
+
+    <div id="p3" class="hidden">
+
+        <h2>
+
+           استعدي هالاسبوع اسبوعك يابرنسس اكتوووووبر ❤️❤️❤️❤️
+
+        </h2>
+
+    </div>
+
+</div>
+
+<script>
+
+    let scale = 1;
+
+    // الانتقال من الصفحة الأولى إلى الثانية
+
+    function go2() {
+
+        document.getElementById("p1").style.display = "none";
+
+        document.getElementById("p2").style.display = "block";
+
+    }
+
+    // تكبير زر "إي" عند الضغط على "لا"
+
+    function grow() {
+
+        scale += 0.4;
+
+        document.getElementById("yesBtn").style.transform =
+
+            "scale(" + scale + ")";
+
+    }
+
+    // الانتقال من الصفحة الثانية إلى الثالثة
+
+    function go3() {
+
+        document.getElementById("p2").style.display = "none";
+
+        document.getElementById("p3").style.display = "block";
+
+    }
+
+</script>
+
+</body>
+
+</html>
